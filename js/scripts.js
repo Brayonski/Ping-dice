@@ -1,20 +1,15 @@
-//this is the back end or the businees logic
-
-//create player with an initial score of 0
 function Player(userName) {
     this.userName = userName;
     this.score = 0;
 
 }
 
-//pass it a player object!
 function Turn(player) {
     this.total = 0;
     this.randNumber = 0;
     this.player = player;
 };
 
-//This creates a random number saves it and then returns it
 Turn.prototype.diceRoller = function(player1, player2) {
     var randNumber = Math.floor(Math.random() * 6) + 1;
     this.total += randNumber;
@@ -29,7 +24,7 @@ Turn.prototype.diceRoller = function(player1, player2) {
         return randNumber;
     };
 };
-// user interface
+
 Turn.prototype.endTurn = function(player1, player2) {
     this.player.score += this.total;
     this.total = 0;
@@ -48,16 +43,10 @@ $(document).ready(function() {
     var player1 = new Player("Player 1");
     var player2 = new Player("Player 2");
 
-    //Start current turn with player1, will be switched to player2 in endTurn
+    
     var currentTurn = new Turn(player1);
 
     var total = currentTurn.total;
-
-    //jquery animations
-    $("#player1").hide().show("slow");
-    $("#player2").hide().show("slow");
-    $("h1").hide().show("slow");
-    $("p").hide().show("slow");
 
     //Prints initial Turn Total of 0
     $("#roll-total").text(total);
