@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PingPong</title>
+    <title>Pig Dice</title>
+    <link rel="icon" type="img/jpg" href="dice.jpeg" />
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
-
 <body>
+<center>
+    <h1>Pig Dice</h1>
 
-    <h1>Pig dice</h1>
     <div class="col-md-12">
-        <p class="paragraph">Let the game begin</p>
+        <p class="par">Lets play</p>
     </div>
 
 <div class="col-md-6">
-    <button class="button1">
-        <span class="play">player1</span>
-        <span class="palyer1-points"></span>
-    </button>
+    <button class="button1"><span class="play">Player1:</span><span id="player1-score"></span></button>
 </div>
 
-<div class="col-md-6">
-    <button class="button1">
-        <span class="play">player1</span>
-        <span class="palyer1-points"></span>
-    </button>
-</div>
-
-    <p>Total:
-        <span class="roll-sum"></span>
-    </p>
-    <p>Current roll:
-        <span class="roll"></span>
-    </p>
-
+    <div class="col-md-6">
+        <button class="button2"><span class="play">Player2:</span><span id="player2-score"></span></button>
+    </div>
+    <p>Total:<span id="roll-total"></span></p>
+    <p>Current Roll:<span id="roll"></span></p>
     <form id="roller">
-        <button class="btn btn-info" id="spin">Roll</button>
+    <button  class="btn-info" id="Roll" >Roll</button>
     </form>
+    <form id="end-turn">
+    <button class="btn-success" id="Hold">Hold</button>
+    </form>
+</center>
 
-    <form id="last-spin">
-        <button class="btn btn-success" id="hold">Hold</button>
-    </form>
+
+
+
+
+
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
