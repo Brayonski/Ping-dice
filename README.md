@@ -21,7 +21,7 @@ You need the following to view the files on your computer.
 * [HTML] - For creating Web pages
 * [Bootstrap 3.3.7] - The front end framework
 * CSS - To create Style sheets
-*jquery - For functionality of the game.
+* jquery - For functionality of the game.
 
 
 ## Authors
